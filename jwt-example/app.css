@@ -1,0 +1,39 @@
+﻿.help-block {
+    font-size: 12px;
+}
+
+.news-item {
+    height: 200px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.news-item .news-img {
+    height: 50%;
+    margin-bottom: 10px;
+}
+.header{
+    height: 56px;
+    font-size: 23px;
+    color: white;
+    background-color: #1976D2;
+    text-align: center;
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.header-text{
+    margin-left: 5px;
+}
+.angular-image{
+    background: url(https://angular.io/resources/images/logos/standard/logo-nav.png) no-repeat;
+    width: 135px;
+    height:36px;
+}
+.article-name{
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}

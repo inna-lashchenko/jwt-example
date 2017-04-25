@@ -1,0 +1,11 @@
+<header class="header">
+    <div class="angular-image"></div>
+    <div class="header-text">NEWS</div>
+</header>
+<div *ngFor="let item of news" class="col-md-6 news-item" [routerLink]="[item.id]">
+    <h5 class="article-name">
+        {{item.name}}
+    </h5>
+    <div [ngStyle]="{'background-image': 'url(' + item.img + ')'}" class="news-img"></div>
+    <div class="news-text">{{item.text}}</div>
+</div>

@@ -1,0 +1,34 @@
+﻿<header class="header">
+    <div class="angular-image"></div>
+    <div class="header-text">NEWS</div>
+</header>
+<div class="wrapper">
+    <div *ngIf="!error" class="buttons">
+        <button (click)="showForm()" class="btn btn-info" type="button">Add news</button>
+        <button routerLink="news" class="btn btn-info" type="button">Show news</button>
+    </div>
+
+    <div *ngIf="isShowNews" class="col-md-offset-2">
+        <h1>Add news</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="name" class="form-control" placeholder="Name" required="" [(ngModel)]="newNews.name" name="name">
+            </div>
+            <div class="form-group">
+                <label>Image</label>
+                <input type="img" #password class="form-control" placeholder="Img URl" name="img" [(ngModel)]="newNews.img">
+            </div>
+            <div class="form-group">
+                <label>Text</label><br>
+                <textarea [(ngModel)]="newNews.text"  name="text" cols="46" rows="6"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary block full-width m-b">Add news</button>
+        </form>
+    </div>
+
+    <div class="error" *ngIf="error">
+        <h1>You have auth problem, bro</h1>
+        <p>{{error}}</p>
+    </div>
+</div>

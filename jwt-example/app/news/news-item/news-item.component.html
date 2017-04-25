@@ -1,0 +1,13 @@
+<header class="header">
+    <div class="angular-image"></div>
+    <div class="header-text">NEWS</div>
+</header>
+<div class="col-md-6 col-md-offset-3 news-item">
+    <h5 class="article-name">
+        {{news[newsId-1].name}}
+    </h5>
+    <div [ngStyle]="{'background-image': 'url(' + news[newsId-1].img + ')'}" class="news-img"></div>
+    <div class="news-text">{{news[newsId-1].text}}</div>
+
+    <button (click)="goBack()" class="btn btn-warning">Вернуться</button>
+</div>
